@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Timetable from './components/Timetable';
-import AdminPanel from './components/AdminPanel';
-import { Performance, Venue, DayData } from './types';
-import { venues, daysData } from './data';
+import React, { useState } from "react";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import AdminPanel from "./components/AdminPanel";
+import Timetable from "./components/Timetable";
+import { daysData, venues } from "./data";
+import { DayData, Performance, Venue } from "./types";
 
 function App() {
   const [performances, setPerformances] = useState<DayData[]>(daysData);
@@ -28,7 +28,7 @@ function App() {
 
   const addVenue = (venue: Venue) => {
     // This function is not implemented as we're using a static list of venues
-    console.log('Adding venue:', venue);
+    console.log("Adding venue:", venue);
   };
 
   return (
